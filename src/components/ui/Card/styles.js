@@ -7,7 +7,8 @@ export const CardContainer = styled.div`
  border-radius: .625rem;
  border: 1px solid #e5e7eb;
  padding: 1.5rem 1.5rem ;
- height: 150px;
+ width: 100%;
+ height: 100%;
  &:hover{
  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1)}
 

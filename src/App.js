@@ -1,10 +1,11 @@
-import { Input } from "./components/ui/Input";
+import { EmptyBooks } from "./components/EmptyBooks";
+
 
 
 function App() {
   return (
-    <div className="App" style={{ width: "50%" }}>
-      <Input text={"Nome: "} placeholder={"escreva"} />
+    <div className="App">
+      < EmptyBooks />
     </div>
   );
 }

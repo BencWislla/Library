@@ -1,21 +1,31 @@
 import { Button } from "../ui/Button";
+import { FiBookOpen } from "react-icons/fi";
+import {
+  DescriptionOfRegistration,
+  IconBook,
+  InfoEmptyBooks,
+  RegistrationContainer,
+  TitleAnyBook,
+} from "./styles";
 
 export function EmptyBooks() {
   return (
-    <div>
-      <div></div>
-      <div>
-        <h2>Nenhum Livro Cadastrado</h2>
-        <p>
+    <RegistrationContainer>
+      <IconBook>
+        <FiBookOpen />
+      </IconBook>
+      <InfoEmptyBooks>
+        <TitleAnyBook>Nenhum Livro Cadastrado</TitleAnyBook>
+        <DescriptionOfRegistration>
           Comece a gerenciar seu acervo cadastrando o primeiro livro da
           biblioteca
-        </p>
-      </div>
+        </DescriptionOfRegistration>
+      </InfoEmptyBooks>
       <Button
         text={"Cadastrar Primeiro Livro"}
         color={"#2563eb"}
         colorText={"white"}
       />
-    </div>
+    </RegistrationContainer>
   );
 }

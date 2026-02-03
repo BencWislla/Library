@@ -1,11 +1,10 @@
-import { Input } from "./components/ui/Input";
-
+import { Card } from "./components/ui/Card";
 
 function App() {
   return (
-    <div className="App" style={{ width: "50%" }}>
-      <Input text={"Nome: "} placeholder={"escreva"} />
-    </div>
+    <div style={{ width: "30%", margin: "100px" }}>
+      <Card title={"1984"} author={"Alguem"} category={"Fantasia"} year={"2000"} />
+    </div >
   );
 }
 

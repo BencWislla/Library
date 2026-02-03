@@ -3,13 +3,22 @@ import { Input } from "../ui/Input";
 import { ButtonContent, FormContainer, FormRegisterContainer } from "./styles";
 
 export function FormRegisterBooks() {
+  const inputInfo = [
+    { id: 1, text: "Título do Livro ", placeholder: "Ex: Dom Casmurro" },
+    { id: 2, text: "Autor ", placeholder: "Ex: Machado de Assis" },
+    { id: 3, text: "Categoria ", placeholder: "Ex: Romance, Ficção, Historía" },
+    { id: 4, text: "Ano de Publicação", placeholder: "Ex: 1899" },
+  ];
   return (
     <FormContainer>
       <FormRegisterContainer>
-        <Input text={"Título do Livro "} />
-        <Input text={"Autor "} />
-        <Input text={"Categoria "} />
-        <Input text={"Ano de Publicação "} />
+        {inputInfo.map((input) => (
+          <Input
+            key={input.id}
+            text={input.text}
+            placeholder={input.placeholder}
+          />
+        ))}
         <ButtonContent>
           <Button text={"Salvar Livro"} color={"#2563eb"} colorText={"white"} />
           <Button text={"Cancelar"} color={"#9ca3af"} colorText={"black"} />

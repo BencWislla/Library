@@ -5,7 +5,7 @@ import styled from 'styled-components'
 //Cor botao azul #2563eb
 
 export const ButtonContainer = styled.button`
-background-Color: ${(props) => props.color};
+background-Color: ${(props) => props.colorFundo};
 color: ${(props => props.colorText)};
 border-radius: .5rem;
 padding: .75rem 1.5rem;

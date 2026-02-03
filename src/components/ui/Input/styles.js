@@ -5,13 +5,14 @@ export const InputContainerWrapper = styled.div`
 width:100%;
 display: flex;
 flex-direction: column;
-gap:1rem ;
+gap: .75rem;
 `
 
 
 export const LabelContainer = styled.label`
  color: #364153;
  font-size: .875rem;
+ font-weight: 500;
 `;
 export const SpanText = styled.span`
   color: #FB2C36;

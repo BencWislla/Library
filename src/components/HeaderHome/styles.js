@@ -29,7 +29,7 @@ svg {
 `;
 
 
-export const TitleBook = styled.h1`
+export const TitleHeader = styled.h1`
 color: black;
 font-size: 1.875rem;
 font-weight: bold;

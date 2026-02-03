@@ -1,8 +1,12 @@
 import { ButtonContainer } from "./styles";
 
-export function Button({ text, onClick, color, colorText }) {
+export function Button({ text, onClick, colorFundo, colorText }) {
   return (
-    <ButtonContainer onClick={onClick} color={color} colorText={colorText}>
+    <ButtonContainer
+      onClick={onClick}
+      colorFundo={colorFundo}
+      colorText={colorText}
+    >
       {text}
     </ButtonContainer>
   );

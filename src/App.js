@@ -1,10 +1,11 @@
-import { HeaderRegister } from "./components/HeaderRegister";
+import { FormRegisterBooks } from "./components/FormRegisterBooks";
 
 
 function App() {
   return (
     <div >
-      <HeaderRegister />
+
+      <FormRegisterBooks />
     </div>
   );
 }

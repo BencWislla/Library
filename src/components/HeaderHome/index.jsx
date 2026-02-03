@@ -4,8 +4,8 @@ import {
   ContentHeader,
   HeaderContent,
   IconBook,
-  TitleBook,
   TitleContainer,
+  TitleHeader,
 } from "./styles";
 
 export function HeaderHome() {
@@ -16,7 +16,7 @@ export function HeaderHome() {
           <IconBook>
             <IoBookOutline />
           </IconBook>
-          <TitleBook>Biblioteca Digital</TitleBook>
+          <TitleHeader>Biblioteca Digital</TitleHeader>
         </TitleContainer>
         <Button
           text={"Cadastrar Livro"}

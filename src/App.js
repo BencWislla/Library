@@ -1,10 +1,10 @@
-import { HeaderHome } from "./components/HeaderHome";
+import { HeaderRegister } from "./components/HeaderRegister";
 
 
 function App() {
   return (
     <div >
-      <HeaderHome />
+      <HeaderRegister />
     </div>
   );
 }

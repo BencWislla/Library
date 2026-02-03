@@ -1,10 +1,10 @@
-import { Input } from "./components/ui/Input";
+import { HeaderHome } from "./components/HeaderHome";
 
 
 function App() {
   return (
-    <div className="App" style={{ width: "50%" }}>
-      <Input text={"Nome: "} placeholder={"escreva"} />
+    <div >
+      <HeaderHome />
     </div>
   );
 }

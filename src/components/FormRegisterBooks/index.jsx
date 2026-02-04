@@ -20,8 +20,16 @@ export function FormRegisterBooks() {
           />
         ))}
         <ButtonContent>
-          <Button text={"Salvar Livro"} color={"#2563eb"} colorText={"white"} />
-          <Button text={"Cancelar"} color={"#9ca3af"} colorText={"black"} />
+          <Button
+            text={"Salvar Livro"}
+            colorFundo={"#2563eb"}
+            colorText={"white"}
+          />
+          <Button
+            text={"Cancelar"}
+            colorFundo={"#9ca3af"}
+            colorText={"black"}
+          />
         </ButtonContent>
       </FormRegisterContainer>
     </FormContainer>

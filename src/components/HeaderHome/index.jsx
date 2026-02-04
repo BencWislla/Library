@@ -20,7 +20,7 @@ export function HeaderHome() {
         </TitleContainer>
         <Button
           text={"Cadastrar Livro"}
-          color={"#2563eb"}
+          colorFundo={"#2563eb"}
           colorText={"#ffff"}
         />
       </ContentHeader>

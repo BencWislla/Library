@@ -10,7 +10,8 @@ color: ${(props => props.colorText)};
 border-radius: .5rem;
 padding: .75rem 1.5rem;
 border: none;
-font-weight: 500;
+font-weight: 600;
+width: 100%;
 transition: all 200ms ease-in-out;
 cursor: pointer;
 

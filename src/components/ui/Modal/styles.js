@@ -10,16 +10,19 @@ justify-content: center;
 align-items: center;
 width: 100%;
 height: 100%;
-background-color: #00000053;
+backdrop-filter: blur(2px);
+background-color: rgba(0,0,0,0.1);
 `;
 export const ModalContainer = styled.div`
 background-color: #fff;
-padding: 1.5rem 1.5rem;
+padding: 1.5rem;
 box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
 width: 100%;
 max-width: 28rem;
-border-radius: .875rem;
-
+border-radius: 0.75rem;
+display: flex;
+flex-direction: column;
+gap: 1rem;
 `;
 
 export const HeaderModal = styled.div`
@@ -39,8 +42,6 @@ font-weight: 600;
 export const ClosedButton = styled.button`
 padding: 0.25rem;
 background-color: transparent;
-color: #0A0A0A;
-font-size: 1.125rem;
 border: none;
 border-radius:0.5rem;
 transition:all 200ms ease-in-out;
@@ -65,25 +66,54 @@ align-items: center;
 `;
 
 export const ExclusionContainer = styled.div`
-border: 1px solid red;
 display: flex;
 flex-direction: row;
 gap: 10px;
 `;
 
 export const BookExclusionContent = styled.div`
-border:1px solid blue;
+display: flex;
+flex-direction: column;
+gap: 0.5rem;
 width: 100%;
 `;
 
+export const TextAsk = styled.p`
+font-size:16px;
+color:#374151;
+`;
+export const TitleBook = styled.p`
+font-size:14px;
+color:#111827;
+font-weight: 600;
+`
+export const BookInfo = styled.p`
+font-size: 14px;
+color:#4B5563;
+`
+export const ConfirmText = styled.p`
+font-size:14px;
+color: #6B7280;
+`
+
 export const BookContent = styled.div`
 border-radius:10px;
-padding: 12px 12px;
+padding: 0.75rem;
+display: flex;
+flex-direction: column;
+gap: 0.25rem;
 background-color: #56555511;
 
 `;
 
 export const ButtonContent = styled.div`
 width:100%;
-border: 1px solid black;
+display: flex;
+flex-direction: row;
+justify-content: space-between;
+`;
+
+export const ButtonSpace = styled.div`
+display: flex;
+width: 49%;
 `;

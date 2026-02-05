@@ -51,6 +51,7 @@ export function FormRegisterBooks() {
   // 1 passo - O meu estado de erro ira receber uma string
   // 2 passo - o botao sera resposavel em confirmar se o meu form esta preenchido ou nao, se nao tiver preeenchido ele mostra a frase de erro se nao guardo no localstorge
 
+  const navigate = useNavigate();
   const [error, setError] = useState("");
 
   function handleInputChange(e) {
@@ -70,10 +71,9 @@ export function FormRegisterBooks() {
     } else {
       localStorage.setItem("Form", JSON.stringify(formValue));
       setError("");
+      navigate("/");
     }
   }
-
-  const navigate = useNavigate();
 
   function cancelForm(e) {
     e.preventDefault();

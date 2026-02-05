@@ -1,9 +1,9 @@
 import styled from "styled-components";
 
 export const HeaderContent = styled.div`
-padding: 24px 24px;
-background-color: #fff;
-box-shadow: 1px 2px 5px rgba(0, 0, 0, 0.18);
+  background-color: #ffffff;
+  border-bottom: 1px solid #e5e7eb;
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
 `;
 
 export const TitleContainer = styled.div`
@@ -30,9 +30,10 @@ svg {
 
 
 export const TitleHeader = styled.h1`
-color: black;
-font-size: 1.875rem;
-font-weight: bold;
+  font-size: 1.875rem;
+  font-weight: 700;
+  color: #111827;
+  line-height: 1.5;
 `;
 
 export const ContentHeader = styled.div`

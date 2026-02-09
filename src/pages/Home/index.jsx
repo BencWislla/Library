@@ -1,4 +1,13 @@
+import { HeaderHome } from "../../components/HeaderHome";
+
 function Home() {
-  return <div>Home</div>;
+  return (
+    <div>
+      <div>
+        <HeaderHome />
+      </div>
+      <div>Lista dos livros</div>
+    </div>
+  );
 }
 export default Home;

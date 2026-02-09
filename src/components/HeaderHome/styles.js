@@ -4,27 +4,42 @@ export const HeaderContent = styled.div`
   background-color: #ffffff;
   border-bottom: 1px solid #e5e7eb;
   box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
-`;
+  `;
+
+export const ContentHeader = styled.div`
+  max-width:80rem;
+  margin-left:auto;
+  margin-right:auto;
+  padding: 1.5rem;
+  display:flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+   `;
 
 export const TitleContainer = styled.div`
 display: flex;
 flex-direction: row;
 align-items: center;
-gap: .625rem;`
+gap: 0.75rem;
+`
 
 export const IconBook = styled.div`
-background-color: #155DFC;
-color: #fff;
-border-radius:.625rem;
-font-size: 16px;
-padding: .5rem .5rem;
+background-color: #2563eb;
+border-radius:.5rem;
+padding: .5rem;
+border: none;
 cursor: pointer;
-svg {
-    transition: transform 0.3s ease;
-  }
+display: flex;
+align-items: center;
+ transition: background-color 200ms, transform 200ms;
 
-  &:hover svg {
-    transform: scale(1.2);
+ &:hover{
+  background-color: #1d4ed8;
+ }
+  &:hover svg{
+    transform: scale(1.1);
+
   }
 `;
 
@@ -36,9 +51,3 @@ export const TitleHeader = styled.h1`
   line-height: 1.5;
 `;
 
-export const ContentHeader = styled.div`
-border: 1px solid blue;
-display: flex;
-flex-direction: row;
-justify-content: space-between;
-align-items: center; `

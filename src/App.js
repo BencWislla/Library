@@ -1,4 +1,6 @@
 import { createGlobalStyle } from "styled-components";
+import { EmptyBooks } from "./components/EmptyBooks";
+
 
 const GlobalStyle = createGlobalStyle`
 body, * {
@@ -11,6 +13,9 @@ function App() {
   return (
     <>
       <GlobalStyle />
+
+      <EmptyBooks />
+
     </>
   );
 }

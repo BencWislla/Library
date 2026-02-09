@@ -19,13 +19,13 @@ import {
 } from "./styles";
 import { Button } from "../Button";
 
-export function Modal({ title, author }) {
+export function Modal({ title, author, onClose, onConfirm }) {
   return (
     <ModalContent>
       <ModalContainer>
         <HeaderModal>
           <TitleHeader>Confirmar Exclusão</TitleHeader>
-          <ClosedButton>
+          <ClosedButton onClick={onClose}>
             <MdOutlineClose size={18} color="#6b7280" />
           </ClosedButton>
         </HeaderModal>
@@ -52,6 +52,7 @@ export function Modal({ title, author }) {
               colorFundo={"#dc2626"}
               text={"Confirmar Exclusão"}
               colorText={"#fff"}
+              onClick={onConfirm}
             />
           </ButtonSpace>
           <ButtonSpace>
@@ -59,6 +60,7 @@ export function Modal({ title, author }) {
               colorFundo={"#e5e7eb"}
               text={"Cancelar"}
               colorText={"#1f2937"}
+              onClick={onClose}
             />
           </ButtonSpace>
         </ButtonContent>

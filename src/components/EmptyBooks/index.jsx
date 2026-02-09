@@ -1,31 +1,30 @@
 import { Button } from "../ui/Button";
-import { FiBookOpen } from "react-icons/fi";
+import { IoBookOutline } from "react-icons/io5";
 import {
   DescriptionOfRegistration,
   IconBook,
-  InfoEmptyBooks,
   RegistrationContainer,
   TitleAnyBook,
 } from "./styles";
 
 export function EmptyBooks() {
+  // const navigate = useNavigate()
   return (
     <RegistrationContainer>
       <IconBook>
-        <FiBookOpen />
+        <IoBookOutline size={64} color="#9ca3af" />
       </IconBook>
-      <InfoEmptyBooks>
-        <TitleAnyBook>Nenhum Livro Cadastrado</TitleAnyBook>
-        <DescriptionOfRegistration>
-          Comece a gerenciar seu acervo cadastrando o primeiro livro da
-          biblioteca
-        </DescriptionOfRegistration>
-      </InfoEmptyBooks>
-      <Button
-        text={"Cadastrar Primeiro Livro"}
-        color={"#2563eb"}
-        colorText={"white"}
-      />
+      <TitleAnyBook>Nenhum Livro Cadastrado</TitleAnyBook>
+      <DescriptionOfRegistration>
+        Comece a gerenciar seu acervo cadastrando o primeiro livro da biblioteca
+      </DescriptionOfRegistration>
+      <div>
+        <Button
+          text={"Cadastrar Primeiro Livro"}
+          colorFundo={"#2563eb"}
+          colorText={"white"}
+        />
+      </div>
     </RegistrationContainer>
   );
 }

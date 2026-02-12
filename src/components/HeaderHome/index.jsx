@@ -7,22 +7,27 @@ import {
   TitleContainer,
   TitleHeader,
 } from "./styles";
+import { useNavigate } from "react-router-dom";
 
 export function HeaderHome() {
+  const navigate = useNavigate();
   return (
     <HeaderContent>
       <ContentHeader>
         <TitleContainer>
           <IconBook>
-            <IoBookOutline />
+            <IoBookOutline size={32} color="#ffff" />
           </IconBook>
           <TitleHeader>Biblioteca Digital</TitleHeader>
         </TitleContainer>
-        <Button
-          text={"Cadastrar Livro"}
-          colorFundo={"#2563eb"}
-          colorText={"#ffff"}
-        />
+        <div>
+          <Button
+            text={"Cadastrar Livro"}
+            colorFundo={"#2563eb"}
+            colorText={"#ffff"}
+            onClick={() => navigate("/RegisterBooks")}
+          />
+        </div>
       </ContentHeader>
     </HeaderContent>
   );

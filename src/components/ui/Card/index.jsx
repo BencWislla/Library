@@ -1,6 +1,7 @@
 import { PiTrash } from "react-icons/pi";
 import {
   AboutTheBook,
+  BookDeatail,
   BookDetails,
   CardContainer,
   CardContent,
@@ -8,25 +9,25 @@ import {
   TitleStyles,
 } from "./styles";
 
-export function Card({ title, author, category, year }) {
+export function Card({ title, author, category, year, onClick }) {
   return (
     <CardContainer>
       <CardContent>
         <TitleStyles>{title}</TitleStyles>
-        <DeleteButton>
-          <PiTrash />
+        <DeleteButton onClick={onClick}>
+          <PiTrash size={20} />
         </DeleteButton>
       </CardContent>
       <BookDetails>
-        <p>
+        <BookDeatail>
           <AboutTheBook>Autor: </AboutTheBook> {author}
-        </p>
-        <p>
+        </BookDeatail>
+        <BookDeatail>
           <AboutTheBook>Categoria: </AboutTheBook> {category}
-        </p>
-        <p>
+        </BookDeatail>
+        <BookDeatail>
           <AboutTheBook>Ano: </AboutTheBook> {year}
-        </p>
+        </BookDeatail>
       </BookDetails>
     </CardContainer>
   );

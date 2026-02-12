@@ -6,7 +6,7 @@ import {
   SpanText,
 } from "./styles";
 
-export function Input({ text, placeholder, value, onChange }) {
+export function Input({ text, placeholder, value, onChange, name }) {
   return (
     <InputContainerWrapper>
       <LabelContainer>
@@ -19,6 +19,7 @@ export function Input({ text, placeholder, value, onChange }) {
           value={value}
           alt="input"
           onChange={onChange}
+          name={name}
         />
       </InputContainer>
     </InputContainerWrapper>

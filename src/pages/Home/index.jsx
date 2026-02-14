@@ -1,13 +1,17 @@
 import { HeaderHome } from "../../components/HeaderHome";
+import { ListBooks } from "../../components/ListBooks";
+import { Container, ContainerList } from "./styles";
 
 function Home() {
   return (
-    <div>
+    <Container>
       <div>
         <HeaderHome />
       </div>
-      <div>Lista dos livros</div>
-    </div>
+      <ContainerList>
+        <ListBooks />
+      </ContainerList>
+    </Container>
   );
 }
 export default Home;

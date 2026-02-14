@@ -6,9 +6,10 @@ import {
   RegistrationContainer,
   TitleAnyBook,
 } from "./styles";
+import { useNavigate } from "react-router-dom";
 
 export function EmptyBooks() {
-  // const navigate = useNavigate()
+  const navigate = useNavigate();
   return (
     <RegistrationContainer>
       <IconBook>
@@ -23,6 +24,7 @@ export function EmptyBooks() {
           text={"Cadastrar Primeiro Livro"}
           colorFundo={"#2563eb"}
           colorText={"white"}
+          onClick={() => navigate("/RegisterBooks")}
         />
       </div>
     </RegistrationContainer>

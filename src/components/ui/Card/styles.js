@@ -8,6 +8,7 @@ export const CardContainer = styled.div`
  border: 1px solid #e5e7eb;
  padding: 1.5rem;
  transition: all 200ms ease-in;
+ max-width: 600px;
  &:hover{
  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1)}
 

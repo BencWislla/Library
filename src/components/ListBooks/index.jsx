@@ -11,29 +11,6 @@ import { BookListContainer, BookListTitle, CardsBooks } from "./styles";
 import { Modal } from "../ui/Modal";
 import { EmptyBooks } from "../EmptyBooks";
 
-const Mock_Books = [
-  {
-    id: 1,
-    title: "Dom Casmurro",
-    author: "Machado de Asis",
-    category: "Romance",
-    year: 1899,
-  },
-  {
-    id: 2,
-    title: "O Pequeno Príncipe",
-    author: "Antoine de Saint-Exupéry",
-    category: "Infantil",
-    year: 1943,
-  },
-  {
-    id: 3,
-    title: "1984",
-    author: "George Orwell",
-    category: "Ficção Distópica",
-    year: 1949,
-  },
-];
 // 1 passo - Devo criar um useState para ter o controle dos meus livros, inicialmente tenho o meu array de objeto fixo, e se surgir alteraçoes nao sera possivel, entao crio um useState que esta resposnsavel em gerenciar os meus livros
 // 2 passo - Preciso trazer dados do localstorge, se estiver dados no localstorge eu trago eles, se nao trago oque tem na mook e salvo a mook no localstorge
 
@@ -53,14 +30,16 @@ const Mock_Books = [
 // 1 passo - se todos os livros forem apagos deve surgir a pagina de nenhum livro cadastardo para isso utilizamos a redenrizacao dupla, se os books.length for igual a zero redereze a pagina, se nao rederize os cards
 
 export function ListBooks() {
-  const [books, setBooks] = useState(Mock_Books);
+  const [books, setBooks] = useState([]);
   const [selectBook, setSelectBook] = useState(null);
   const [openModal, setOpenModal] = useState(false);
 
   function handleConfirmBook() {
     const upDatedBooks = books.filter((book) => book.id !== selectBook.id);
+    console.log(books);
 
     setBooks(upDatedBooks);
+    console.log(upDatedBooks);
 
     localStorage.setItem("Books", JSON.stringify(upDatedBooks));
 
@@ -72,10 +51,7 @@ export function ListBooks() {
     const getBooks = localStorage.getItem("Books");
     if (getBooks) {
       const parsed = JSON.parse(getBooks);
-      setBooks([...Mock_Books, ...parsed]);
-    } else {
-      localStorage.setItem("Books", JSON.stringify(Mock_Books));
-      setBooks(Mock_Books);
+      setBooks([...parsed]);
     }
   }, []);
 

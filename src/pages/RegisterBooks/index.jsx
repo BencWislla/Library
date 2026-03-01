@@ -4,17 +4,18 @@
 
 import { FormRegisterBooks } from "../../components/FormRegisterBooks";
 import { HeaderRegister } from "../../components/HeaderRegister";
+import { Container } from "../Home/styles";
 
 function RegisterBooks() {
   return (
-    <div>
+    <Container>
       <div>
         <HeaderRegister />
       </div>
       <div>
         <FormRegisterBooks />
       </div>
-    </div>
+    </Container>
   );
 }
 export default RegisterBooks;

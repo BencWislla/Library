@@ -69,7 +69,16 @@ export function FormRegisterBooks() {
     if (arrayValues.some((value) => value === "")) {
       setError("Formulario incompleto! Preencha correctamente os dados.");
     } else {
-      localStorage.setItem("Form", JSON.stringify(formValue));
+      const getBooks = localStorage.getItem("Books") || JSON.stringify([]);
+      const arrayBooks = JSON.parse(getBooks);
+      localStorage.setItem(
+        "Books",
+        JSON.stringify([
+          ...arrayBooks,
+          { id: arrayBooks.length, ...formValue },
+        ]),
+      );
+
       setError("");
       navigate("/");
     }
